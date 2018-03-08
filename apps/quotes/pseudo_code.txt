@@ -1,0 +1,47 @@
+/
+    check that user is not logged in
+    if "id" not in session:
+        render form (registration)
+    else:
+        return to dashboard
+/register 
+    process form (registration)
+    process request.POST
+    valid?
+        add to db
+    else:
+        errors
+    redirect to index
+/login
+    process request.POST
+    find user in db
+    user exist?
+        check password
+    else:
+        redirect("/")    
+
+/quotes/add    
+  
+if "id" not in session:
+    return redirect("/")             #protect
+  render form
+/quotes
+quotes = Quotes.objects.get.all
+favorites = Favorites.objects.filter(id=user_id)
+if "id" not in session:
+    return redirect("/")             #protect
+favorites = Quotes.objects.filter(id=user_id)
+   
+
+/users/(<?P<user_id>\d+)       ##protect
+user= User.objects.get(id=user_id)
+quotes = Quotes.objects.get(user=user_id)
+
+
+
+/logout
+
+
+# do I need to be logged in
+# do I need data
+# do I need to process data
